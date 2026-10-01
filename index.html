@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyDeck - Study Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>StudyDeck</h1>
+    <p>Put your subjects in order, tick off topics, and time every study session.</p>
+  </div>
+  <div class="totals" id="totals" aria-live="polite"></div>
+</header>
+<main>
+  <form id="subjectForm" class="add">
+    <input id="subjectName" placeholder="New subject, e.g. Physics" required maxlength="40" aria-label="Subject name">
+    <input id="subjectColor" type="color" value="#4f5bd5" aria-label="Subject color">
+    <button class="go">Add subject</button>
+  </form>
+  <section id="board" class="board"></section>
+  <details class="guide">
+    <summary>How to use StudyDeck</summary>
+    <ol>
+      <li><b>Add subjects.</b> Type a name, pick a color, and press Add subject.</li>
+      <li><b>Set your study order.</b> Subject 1 is what you study first. Use the up and down arrows on a card to move it. The numbers update automatically.</li>
+      <li><b>Customize.</b> Click a subject's name to rename it. Click its color dot to change the color. Use the cross to delete it.</li>
+      <li><b>Build a checklist.</b> Add every topic you need to cover, then tick each one when done. The progress bar fills as you go.</li>
+      <li><b>Track time.</b> Press Start when you sit down and Pause when you stop. Starting one subject pauses the others. Reset clears that subject's time.</li>
+      <li><b>Your data stays with you.</b> Everything is saved in this browser on this device. Clearing browser data erases it.</li>
+    </ol>
+  </details>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
